@@ -6,6 +6,7 @@ import data from './components/data.json'
 
 const App = () => {
   return (
+
     <Phonebook contacts={data} />
   )
 }
