@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
 import App from './App';
-import store from "./redux/store";
-import { myAction } from "./redux/action";
 import reportWebVitals from './reportWebVitals';
-
-console.log(store.dispatch(myAction))
 
 ReactDOM.render(
   <React.StrictMode>
