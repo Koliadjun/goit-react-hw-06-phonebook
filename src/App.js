@@ -1,14 +1,11 @@
 import './App.css';
-import React from 'react'
+import React from 'react';
 
 import Phonebook from './components/Phonebook';
-import data from './components/data.json'
+import data from './components/data.json';
 
 const App = () => {
-  return (
+  return <Phonebook contacts={data} />;
+};
 
-    <Phonebook contacts={data} />
-  )
-}
-
-export default App
+export default App;
