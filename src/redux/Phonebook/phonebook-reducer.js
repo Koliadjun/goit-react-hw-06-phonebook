@@ -15,8 +15,8 @@ const items = (state = [], { type, payload }) => {
 };
 const filter = (state = '', { type, payload }) => {
   switch (type) {
-    case actions.FORM_CHANGE:
-      return state;
+    case actions.CHANGE_FILTER:
+      return payload;
 
     default:
       return state;

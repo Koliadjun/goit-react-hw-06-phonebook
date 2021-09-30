@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-
-import s from './ContactForm.module.css';
 import { connect } from 'react-redux';
 
+import s from './ContactForm.module.css';
 import { addContact } from '../../redux/Phonebook/phonebook-action';
+
 function ContactForm({ onSubmitHandler }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
