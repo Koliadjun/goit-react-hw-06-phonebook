@@ -6,7 +6,6 @@ import s from './ContactList.module.css';
 import { deleteContact } from '../../redux/Phonebook/phonebook-action';
 
 function ContactList({ contacts, onClick }) {
-  console.log(contacts);
   return (
     <ul className={s.list}>
       {contacts.map(contact => (
