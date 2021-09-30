@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 import s from './ContactForm.module.css';
+import { connect } from 'react-redux';
+
+import { addContact } from '../../redux/Phonebook/phonebook-action';
 function ContactForm({ onSubmitHandler }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -26,7 +29,7 @@ function ContactForm({ onSubmitHandler }) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmitHandler({ id: shortid.generate(), name, number });
+    onSubmitHandler({ name, number });
     reset();
   };
 
@@ -70,4 +73,8 @@ ContactForm.propTypes = {
   onSubmitHandler: PropTypes.func.isRequired,
 };
 
-export default ContactForm;
+const mapDispatchToProps = dispatch => ({
+  onSubmitHandler: data => dispatch(addContact(data)),
+});
+
+export default connect(null, mapDispatchToProps)(ContactForm);
